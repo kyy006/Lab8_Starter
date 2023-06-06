@@ -1,1 +1,8 @@
 # Lab 8 - Starter
+Kai Yui Yeung
+
+1. Within a Github action that runs whenever code is pushed
+Automated tests should be integrated into your continuous integration/continuous delivery (CI/CD) pipeline. This strategy enables immediate feedback on the system-wide impact of your local changes. Each commit should be built, and the entire test suite should be run against this build. This helps to identify any issues or conflicts early in the development cycle when they are typically easier and less costly to fix.
+2. No, end-to-end tests aren't typically used to check a specific function's output. For that, you would use unit tests which are designed to validate individual code modules, such as functions, isolated from the rest of the codebase. End-to-end tests are more about validating overall workflows within the system.
+3. No, You could use unit tests to test certain aspects of the "message" feature, such as ensuring the correct function execution for creating, sending, and receiving messages. However, to fully test a feature like this which involves user interaction and possibly multiple components working together, integration tests or end-to-end tests would be more appropriate to test the whole process from the user's perspective.
+4. Yes, you would use a unit test to test the "max message length" feature. This is a perfect use case for unit testing because it's a simple, isolated function that should reject inputs over a certain length. You can write a unit test that attempts to input a string of 81 characters, for example, and then confirm that the function properly prevents this. Unit tests are excellent for this type of focused, functional validation where the expected behavior for a given input is clear and can be tested in isolation.
